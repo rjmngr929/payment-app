@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/notify_card_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="1dp"
+    app:contentPadding="@dimen/_20sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/notify_icon"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/colorGrey"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/notify_icon">
+            <TextView
+                android:id="@+id/notify_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You Get Cashback!"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/notify_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You get $5 cashback from payment"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/editText_gray"
+                android:fontFamily="sans-serif-medium"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

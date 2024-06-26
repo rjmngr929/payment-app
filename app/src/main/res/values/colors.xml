@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="color_cream">#F2F2F2</color>
+
+    <color name="success">#00B412</color>
+    <color name="success_light">#EDFFEE</color>
+
+    <color name="failed">#B40000</color>
+    <color name="failed_light">#FFEAEA</color>
+
+    <color name="promo_blue">#558CFF</color>
+    <color name="promo_red">#FF6D73</color>
+    <color name="promo_purple">#9377FF</color>
+    <color name="promo_green">#2FD275</color>
+
+    <color name="editText_bg">#FAFAFA</color>
+    <color name="editText_gray">#9E9E9E</color>
+
+    <color name="button_blue_20">#1A0080ff</color>
+    <color name="button_blue">#0080ff</color>
+
+    <color name="colorPrimary">#03DAC6</color>
+    <color name="colorPrimaryDark">#aeded9</color>
+    <color name="colorAccent">#00a294</color>
+
+<!--    <color name="colorPrimary">#FFFFFF</color>-->
+<!--    <color name="colorPrimaryDark">#FFFFFF</color>-->
+<!--    <color name="colorAccent">#4CAF50</color>-->
+    <color name="colorPurple">#6c63ff</color>
+    <color name="colorIndigo">#303F9F</color>
+    <color name="colorBlueMidnight">#003366</color>
+    <color name="colorGrey">#C9C9C9</color>
+</resources>

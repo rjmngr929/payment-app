@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+    android:id="@+id/fragment_history_menu_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_border_top"
+    android:padding="@dimen/_12sdp"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textSize="@dimen/_18ssp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dividerColor="@color/editText_gray"
+        android:layout_marginVertical="@dimen/_14sdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are you sure you want to log out?"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-medium"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_12sdp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="@color/button_blue"
+            android:background="@drawable/rounded_btn_bg"
+            app:backgroundTint="@color/button_blue_20"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/yes_logout_btn"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/yes_logout_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Yes, Logout"
+            android:background="@drawable/rounded_btn_bg"
+            app:backgroundTint="@color/button_blue"
+            android:layout_marginStart="@dimen/_15sdp"
+            app:layout_constraintStart_toEndOf="@+id/cancel_btn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

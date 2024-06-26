@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.profile.activity.profile.ProfileActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/profile_toolbar"
+        layout="@layout/activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollIndicators="none"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <EditText
+                android:id="@+id/fullname_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/semi_curved_border"
+                android:hint="Full Name"
+                android:inputType="text"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_8sdp"
+                tools:ignore="TextFields" />
+
+            <EditText
+                android:id="@+id/dob_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/semi_curved_border"
+                android:hint="DOB"
+                android:drawableEnd="@drawable/ic_calendar"
+                android:inputType="datetime"
+                android:enabled="false"
+                android:clickable="true"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_8sdp"
+                tools:ignore="TextFields" />
+
+            <EditText
+                android:id="@+id/email_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/semi_curved_border"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_8sdp"
+                tools:ignore="TextFields" />
+
+            <EditText
+                android:id="@+id/mobile_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/semi_curved_border"
+                android:hint="Mobile number"
+                android:inputType="phone"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_8sdp"
+                tools:ignore="TextFields" />
+
+            <EditText
+                android:id="@+id/gender_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/semi_curved_border"
+                android:hint="Select Gender"
+                android:drawableEnd="@drawable/ic_arrow_down"
+                android:inputType="text"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_8sdp"
+                tools:ignore="TextFields" />
+
+            <EditText
+                android:id="@+id/address_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/semi_curved_border"
+                android:hint="Address"
+                android:inputType="text"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_8sdp"
+                tools:ignore="TextFields" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/continue_reset_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:background="@drawable/rounded_btn_bg"
+                app:backgroundTint="@color/button_blue"
+                android:layout_marginVertical="@dimen/_15sdp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

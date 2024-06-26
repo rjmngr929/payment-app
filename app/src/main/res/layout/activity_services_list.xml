@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.dashboard.home.activity.ServicesListActivity">
+
+    <include
+        android:id="@+id/services_toolbar"
+        layout="@layout/activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/nested_scroll_layout"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/services_toolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_12sdp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bill"
+                android:textSize="@dimen/_20ssp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"/>
+
+            <com.example.paymentapplication.utils.CustomGridView
+                android:id="@+id/services_bill_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="6dp"
+                android:numColumns="4"
+                android:verticalSpacing="6dp"
+                android:stretchMode="columnWidth"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dividerColor="@color/colorGrey"
+                android:layout_marginVertical="@dimen/_10sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Insurance"
+                android:textSize="@dimen/_20ssp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"/>
+
+            <com.example.paymentapplication.utils.CustomGridView
+                android:id="@+id/services_insurance_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="6dp"
+                android:numColumns="4"
+                android:verticalSpacing="6dp"
+                android:stretchMode="columnWidth"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dividerColor="@color/colorGrey"
+                android:layout_marginVertical="@dimen/_10sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option"
+                android:textSize="@dimen/_20ssp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"/>
+
+            <com.example.paymentapplication.utils.CustomGridView
+                android:id="@+id/services_option_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="6dp"
+                android:numColumns="4"
+                android:verticalSpacing="6dp"
+                android:stretchMode="columnWidth"/>
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

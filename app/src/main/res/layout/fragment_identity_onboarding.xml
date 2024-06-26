@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".ui.accountSetup.fragment.IdentityOnboardingFragment">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:fillViewport="true">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+       <LinearLayout
+           android:id="@+id/linear_layout"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:paddingHorizontal="@dimen/_12sdp"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toTopOf="parent">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="let's Verify Your Identity"
+               android:textSize="@dimen/_18ssp"
+               android:textColor="@color/black"
+               android:textStyle="bold"
+               android:textAlignment="center"/>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="we are required to verify your identity before you can use the service. Your information will be encrypted and stored securely."
+               android:textSize="@dimen/_14ssp"
+               android:textColor="@color/editText_gray"
+               android:textAlignment="center"
+               android:layout_marginVertical="@dimen/_10sdp"/>
+
+       </LinearLayout>
+
+       <ImageView
+           android:id="@+id/identity_verify_img"
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/_300sdp"
+           android:background="@drawable/ic_identify_verification"
+           android:scaleType="fitXY"
+           android:layout_margin="@dimen/_14sdp"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintBottom_toTopOf="@+id/verify_identity_btn"
+           app:layout_constraintTop_toBottomOf="@+id/linear_layout"/>
+
+       <com.google.android.material.button.MaterialButton
+           android:id="@+id/verify_identity_btn"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Verify Identity"
+           android:background="@drawable/rounded_btn_bg"
+           app:backgroundTint="@color/button_blue"
+           android:layout_margin="@dimen/_15sdp"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"/>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+   </ScrollView>
+
+</FrameLayout>

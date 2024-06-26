@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account_setup_navgraph"
+    app:startDestination="@id/reasonForAppFragment">
+
+    <fragment
+        android:id="@+id/reasonForAppFragment"
+        android:name="com.example.paymentapplication.ui.accountSetup.fragment.ReasonForAppFragment"
+        android:label="fragment_reason_for_app"
+        tools:layout="@layout/fragment_reason_for_app" >
+        <action
+            android:id="@+id/action_reasonForAppFragment_to_identityOnboardingFragment"
+            app:destination="@id/identityOnboardingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/identityOnboardingFragment"
+        android:name="com.example.paymentapplication.ui.accountSetup.fragment.IdentityOnboardingFragment"
+        android:label="fragment_identity_onboarding"
+        tools:layout="@layout/fragment_identity_onboarding" >
+        <action
+            android:id="@+id/action_identityOnboardingFragment_to_reasonForAppFragment"
+            app:destination="@id/reasonForAppFragment" />
+        <action
+            android:id="@+id/action_identityOnboardingFragment_to_proofIdentityFragment"
+            app:destination="@id/proofIdentityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/proofIdentityFragment"
+        android:name="com.example.paymentapplication.ui.accountSetup.fragment.ProofIdentityFragment"
+        android:label="fragment_proof_identity"
+        tools:layout="@layout/fragment_proof_identity" >
+        <action
+            android:id="@+id/action_proofIdentityFragment_to_fillProfileFragment"
+            app:destination="@id/fillProfileFragment" />
+        <action
+            android:id="@+id/action_proofIdentityFragment_to_identityOnboardingFragment"
+            app:destination="@id/identityOnboardingFragment" />
+        <action
+            android:id="@+id/action_proofIdentityFragment_to_panVerificationFragment"
+            app:destination="@id/panVerificationFragment" />
+        <action
+            android:id="@+id/action_proofIdentityFragment_to_aadharVerifyFragment"
+            app:destination="@id/aadharVerifyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fillProfileFragment"
+        android:name="com.example.paymentapplication.ui.accountSetup.fragment.FillProfileFragment"
+        android:label="fragment_fill_profile"
+        tools:layout="@layout/fragment_fill_profile" >
+        <action
+            android:id="@+id/action_fillProfileFragment_to_proofIdentityFragment"
+            app:destination="@id/proofIdentityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/panVerificationFragment"
+        android:name="com.example.paymentapplication.ui.accountSetup.fragment.PanVerificationFragment"
+        android:label="fragment_pan_verification"
+        tools:layout="@layout/fragment_pan_verification" >
+        <action
+            android:id="@+id/action_panVerificationFragment_to_proofIdentityFragment"
+            app:destination="@id/proofIdentityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aadharVerifyFragment"
+        android:name="com.example.paymentapplication.ui.accountSetup.fragment.AadharVerifyFragment"
+        android:label="fragment_aadhar_verify"
+        tools:layout="@layout/fragment_aadhar_verify" >
+        <action
+            android:id="@+id/action_aadharVerifyFragment_to_proofIdentityFragment"
+            app:destination="@id/proofIdentityFragment" />
+    </fragment>
+
+</navigation>
